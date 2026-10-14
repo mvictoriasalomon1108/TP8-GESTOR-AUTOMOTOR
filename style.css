@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+input,
+select {
+    padding: 8px;
+    margin: 5px;
+}
+
+.vista {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    margin: auto;
+    max-width: 800px;
+}
+
+.vista.activa {
+    display: flex;
+}
+
+form {
+    display: flex;
+    
+}
+
+form button {
+    width: 150px;
+}
+

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conductores y Vehiculos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<button onclick="filtrar_A1()">FILTRAR A1</button>
+
+<div id="resultados_personas">
+
+</div>
+
+<div id="resultados_vehiculos">
+    
+</div>
+
+    <nav>
+        <button onclick="mostrarVista('crearConductor')">Crear conductor</button>
+        <button onclick="mostrarVista('crearVehiculo')">Crear vehiculo</button>
+        <button onclick="mostrarVista('verConductores')">Ver conductores</button>
+        <button onclick="mostrarVista('verVehiculos')">Ver vehiculos</button>
+    </nav>
+
+    <main>
+        <section id="crearConductor" class="vista activa">
+            <h2>Crear conductor</h2>
+
+            <form id="formConductor">
+                <input type="text" id="nombre" requerido>
+                <input type="number" id="edad" requerido>
+
+                <select id="carnet" requerido>
+                    <option value="">Tipo de carnet</option>
+                    <option value="A1">A1</option>
+                    <option value="A2">A2</option>
+                    <option value="A3">A3</option>
+                </select>
+
+                <select id="seguro" requerido>
+                    <option value="">Tiene seguro</option>
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                </select>
+
+                <button type="Guardar conductor/button>
+            </form>
+
+            <p id="mensajeConductor"></p>
+        </section>
+
+        <section id="crearVehiculo" class="vista">
+            <h2>Crear vehiculo</h2>
+
+            <form id="formVehiculo">
+                <input type="text" id="marca">
+                <input type="text" id="modelo">
+                <input type="text" id="patente">
+
+                <select id="tipoVehiculo" required>
+                    <option value="">Tipo</option>
+                    <option value="A1">A1</option>
+                    <option value="A2">A2</option>
+                    <option value="A3">A3</option>
+                </select>
+
+                <button type="submit">Guardar vehiculo</button>
+            </form>
+
+            <p id="mensajeVehiculo"></p>
+        </section>
+
+        <section id="verConductores" class="vista">
+            <h2>Ver conductores</h2>
+
+            <select id="filtroSeguro">
+                <option value="todos">Todos los seguros</option>
+                <option value="Si">Con seguro</option>
+                <option value="No">Sin seguro</option>
+            </select>
+
+            <select id="filtroCarnet">
+                <option value="todos">Todos los carnets</option>
+                <option value="A1">A1</option>
+                <option value="A2">A2</option>
+                <option value="A3">A3</option>
+            </select>
+                        <h>Nombre</h>
+                        <h>Edad</h>
+                        <h>Carnet</h>
+                        <h>Seguro</h>
+                        <h>Accion</h>
+                <body id="tablaConductores"></body>
+        </section>
+
+        <section id="verVehiculos" class="vista">
+            <h2>Ver vehiculos</h2>
+
+            <select id="filtroMarca">
+                <option value="todos">Todas las marcas</option>
+            </select>
+
+            <select id="filtroTipoVehiculo">
+                <option value="todos">Todos los tipos</option>
+                <option value="A1">A1</option>
+                <option value="A2">A2</option>
+                <option value="A3">A3</option>
+            </select>
+                        <h>Marca</h>
+                        <h>Modelo</h>
+                        <h>Patente</h>
+                        <h>Tipo</h>
+                        <h>Accion</h>
+                body id="tablaVehiculos"></body>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
